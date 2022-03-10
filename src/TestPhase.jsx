@@ -6,7 +6,6 @@
 //causal strength of one colored ball that was drawn
 
 import React, { useState, useRef } from 'react';
-import Likert from 'react-likert-scale';
 import './TestPhase.css';
 import TestImage from './TestImage';
 import Data from './Data';
