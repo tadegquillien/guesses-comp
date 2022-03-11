@@ -70,7 +70,8 @@ const Instructions = (props) => {
 //the first page
 const Intro = (props) => {
     return (
-        <span style={textStyle}>
+        <span style={textStyle}
+        >
             <p style={{ color: "red" }}>(Please do not refresh the page during the study -- you would be unable to complete the experiment)</p>
             <br></br>
             <p >In this study we are interested in how people describe what they think will happen in a given situation.</p>
@@ -112,15 +113,26 @@ const TaskTutorial = (props) => {
         <div className="page"
         //style={textStyle}
         >
-            <div className="text" style={props.localTextStyle}>
+            <div //className="text" 
+            style={props.localTextStyle}>
                 <p>Here is an example box. When you click on "draw", one ball will be randomly drawn from the box. Each ball is equally likely to be selected.</p>
                 <p>Click on "draw" next to the box to draw a ball. Click on "put back" to put the ball back in the box.</p>
                 <p>Please do this a few times before moving on.</p><br></br>
             </div>
 
+            <div 
+            className="afterClick"
+            >
+                {nextPageButton}
+            </div>
+
             {/*generate one urn. It is set up so that the participant will draw a black ball*/}
-            <div className="containerInst">
-                <span className="urnInst"><GenerateUrn ids={circle_ids} urnColorID={4} urnLetter={"A"}
+            <div 
+            className="containerInst"
+            >
+                <span 
+                className="urnInst"
+                ><GenerateUrn ids={circle_ids} urnColorID={4} urnLetter={"A"}
                     drawn={0}
                     ballColors={useRef(shuffle(["blue", "blue", "blue", "blue", "blue", "blue",
                         "blue", "blue", "red", "red", "yellow", "green"])).current}
@@ -133,9 +145,7 @@ const TaskTutorial = (props) => {
                 /></span>
 
             </div>
-            <div className="afterClick">
-                {nextPageButton}
-            </div>
+            
 
             <br></br>
         </div>
@@ -174,9 +184,17 @@ const TaskTutorialTwo = (props) => {
     return (
 
         <div className="page">
-            <div className="text" style={props.localTextStyle}>
+            <div //className="text" 
+            style={props.localTextStyle}
+            >
                 <p>Here is another example of a box </p>
                 <p>Each ball is equally likely to be drawn from the box, so the more balls of a given color there are, the more likely you are to draw that color.</p></div>
+
+            <div className="afterClick" style={props.localTextStyle}
+            >
+
+                {nextPageButton}
+            </div>
 
             <div className="containerInst">
                 {/*generate one urn. It is set up so that the participant will draw a red ball*/}
@@ -193,10 +211,7 @@ const TaskTutorialTwo = (props) => {
                     setCounter={setCounter}
                 /></div>
             </div>
-            <div className="afterClick" style={props.localTextStyle}>
-
-                {nextPageButton}
-            </div>
+            
 
         </div>
 
