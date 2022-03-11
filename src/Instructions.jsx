@@ -120,11 +120,11 @@ const TaskTutorial = (props) => {
                 <p>Please do this a few times before moving on.</p><br></br>
             </div>
 
-            <div 
+            {/* <div 
             className="afterClick"
             >
-                {nextPageButton}
-            </div>
+                
+            </div> */}
 
             {/*generate one urn. It is set up so that the participant will draw a black ball*/}
             <div 
@@ -132,7 +132,9 @@ const TaskTutorial = (props) => {
             >
                 <span 
                 className="urnInst"
-                ><GenerateUrn ids={circle_ids} urnColorID={4} urnLetter={"A"}
+                >
+                    {nextPageButton}
+                    <GenerateUrn ids={circle_ids} urnColorID={4} urnLetter={"A"}
                     drawn={0}
                     ballColors={useRef(shuffle(["blue", "blue", "blue", "blue", "blue", "blue",
                         "blue", "blue", "red", "red", "yellow", "green"])).current}
@@ -190,15 +192,18 @@ const TaskTutorialTwo = (props) => {
                 <p>Here is another example of a box </p>
                 <p>Each ball is equally likely to be drawn from the box, so the more balls of a given color there are, the more likely you are to draw that color.</p></div>
 
-            <div className="afterClick" style={props.localTextStyle}
+            {/* <div className="afterClick" style={props.localTextStyle}
             >
 
-                {nextPageButton}
-            </div>
+                
+            </div> */}
 
             <div className="containerInst">
+            
                 {/*generate one urn. It is set up so that the participant will draw a red ball*/}
-                <div className="urnInst"><GenerateUrn ids={circle_ids} urnColorID={1} urnLetter={"A"}
+                <div className="urnInst">
+                {nextPageButton}
+                    <GenerateUrn ids={circle_ids} urnColorID={1} urnLetter={"A"}
                     drawn={1}
                     ballColors={useRef(shuffle(["yellow", "yellow", "yellow", "yellow", "yellow", "yellow",
                         "yellow", "yellow", "yellow",
