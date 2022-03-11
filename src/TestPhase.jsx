@@ -39,7 +39,7 @@ const TestPhase = (props) => {
     const composedTextStyle = props.mode=="instructions" ? {fontSize: "2vw"} : {fontSize: "3vw"};
     const col1 = buttonOrder[0];
     const instructionsText = props.mode == "instructions" ? <div style={{fontSize: "1.5vw",
-    margin:'auto', padding: '5vw'}}
+    margin:'auto', padding: '0vw 5vw 0vw 5vw'}}
     >
         <p >Here is one example. 
     Suppose you think that if someone draws a ball from the box, it will probably
@@ -52,7 +52,8 @@ const TestPhase = (props) => {
     button again.
     <br></br>
    
-    Try to construct a guess, and then click 'Next' to start the task.
+    To see how this works, use the interface to make the guess 
+    "{buttonOrder[0]} or {buttonOrder[1]}" (regardless of how good a guess you think that is), and then click 'Next' to start the task.
 
         </p>
     </div>  : null;
@@ -98,7 +99,20 @@ const TestPhase = (props) => {
             props.incrementTest(props.testNumber);
         }
         
-        else{props.setTransitionTrial((a)=>a+1)}
+        else{
+            Data.attnCheck.push({
+                //the colors we requested the participants to give
+                //in the instructions trial
+                requestOne: buttonOrder[0],
+                requestTwo: buttonOrder[1],
+                //the participant's response
+                blue: blue == "blue" ? 1 : 0,
+                green: green == "green" ? 1 : 0,
+                red: red == "red" ? 1 : 0,
+                yellow: yellow == "yellow" ? 1 : 0,
+
+            })
+            props.setTransitionTrial((a)=>a+1)}
 
               
     }
