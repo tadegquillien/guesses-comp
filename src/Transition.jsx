@@ -46,9 +46,9 @@ const TransitionOne = (props) => {
         <div style={textStyle}>
        <p> On each page, you will see a box.
            If someone draws one ball from that box, which color might they get?</p>
-<p>There are different guesses that one could make -- for instance, “it will probably be a {colornames[0]} ball”, “it will probably be a {colornames[1]} ball or a {colornames[2]} ball”, etc.
-For each box, we will ask you to make a guess. You can compose a guess by clicking on buttons that will add the color to the guess.
-
+<p>There are different guesses that one could make -- for instance, “it will probably be a {colornames[0]} ball”, “it will probably be a {colornames[1]} ball or a {colornames[2]} ball”, etc.</p>
+<p>For each box, we will ask you to make a guess. You can compose a guess by clicking on buttons that will add colors to the guess. For instance, if you want to make the guess
+"it will probably be a {colornames[0]} ball or a {colornames[1]} ball or a {colornames[2]} ball", you can click on the button for {colornames[0]}, the button for {colornames[1]} and the button for {colornames[2]}.
 </p>        
         <br></br>
         <button style={buttonStyle} onClick={()=>handleClick()}>click to continue</button>

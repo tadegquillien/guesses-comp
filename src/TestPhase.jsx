@@ -38,22 +38,19 @@ const TestPhase = (props) => {
 
     const composedTextStyle = props.mode=="instructions" ? {fontSize: "2vw"} : {fontSize: "3vw"};
     const col1 = buttonOrder[0];
+
+  
     const instructionsText = props.mode == "instructions" ? <div style={{fontSize: "1.5vw",
     margin:'auto', padding: '0vw 5vw 0vw 5vw'}}
     >
-        <p >Here is one example. 
-    Suppose you think that if someone draws a ball from the box, it will probably
-     be  {buttonOrder[0]} or {buttonOrder[1]}. You can express this
-    by clicking on the {buttonOrder[0]} and 
-    the {buttonOrder[1]} button.
-    <br></br>
-    
-    If you change your mind about a color you can remove it from the guess by clicking on the 
-    button again.
-    <br></br>
-   
-    To see how this works, use the interface to make the guess 
-    "{buttonOrder[0]} or {buttonOrder[1]}" (regardless of how good a guess you think that is), and then click 'Next' to start the task.
+        <p >Let us try once to see how this works.</p>
+    <p>Please click on the button for {buttonOrder[0]}, and then on the button for {buttonOrder[1]}.</p>
+   <p> You will see that the guess "{buttonOrder[0]} or {buttonOrder[1]}" appears on the screen, indicating that you
+   think the ball will probably be {buttonOrder[0]} or {buttonOrder[1]}.</p>
+   <p>In general you can include as many colors as you wish in a guess (from 1 color to 4 colors). If you change your mind about a color you can remove it from the guess by clicking on the 
+    button again.</p>
+    <p> Feel free to explore the interface by clicking on more buttons, but so we know you are paying attention please make sure that the screen says
+     "{buttonOrder[0]} or {buttonOrder[1]}" when you are ready to click on 'Next' (even if you think this would not be your preferred guess in that particular case).
 
         </p>
     </div>  : null;

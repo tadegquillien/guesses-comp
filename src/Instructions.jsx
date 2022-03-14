@@ -35,8 +35,8 @@ const Instructions = (props) => {
         alignItems: "center",
         textAlign: "left",
         //minHeight: "100vh",
-        marginLeft: "20vw",
-        marginRight: "20vw",
+        marginLeft: "10vw",
+        marginRight: "10vw",
         fontSize: "20px",
     }
 
@@ -114,7 +114,8 @@ const TaskTutorial = (props) => {
         //style={textStyle}
         >
             <div //className="text" 
-            style={props.localTextStyle}>
+            style={props.localTextStyle}
+            >
                 <p>Here is an example box. When you click on "draw", one ball will be randomly drawn from the box. Each ball is equally likely to be selected.</p>
                 <p>Click on "draw" next to the box to draw a ball. Click on "put back" to put the ball back in the box.</p>
                 <p>Please do this a few times before moving on.</p><br></br>
